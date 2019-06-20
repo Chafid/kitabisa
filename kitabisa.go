@@ -19,6 +19,7 @@ func PrintList (numberList []int) {
 		fmt.Print(numberList[i])
 		fmt.Print(" ")
 	}
+	fmt.Print("\n");
 }
 
 func PrintPrime (noOfSeq int) []int {
