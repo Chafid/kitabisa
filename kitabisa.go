@@ -69,8 +69,9 @@ func main () {
 	} else if argCount == 3 {
 		firstArg, firstErr := strconv.Atoi(os.Args[1])
 		secondArg, secondErr := strconv.Atoi(os.Args[2])  
+		//fmt.Println (os.Args[3])
 		if  firstErr == nil && secondErr == nil  {
-			if os.Args[3] == "*" {
+			if os.Args[3] == "x" {
 				calcResult = PrintMulti(firstArg, secondArg)	
 				fmt.Println ("Run multiplication function")
 				fmt.Println (calcResult)
@@ -79,7 +80,7 @@ func main () {
 				calcResult = firstArg + secondArg
 				fmt.Println (calcResult)
 			} else {
-				fmt.Println ("Operator must be * or +")	
+				fmt.Println ("Operator must be x or +")	
 			}
 		} else {
 			fmt.Println ("First two arguments must be numbers")
@@ -88,7 +89,7 @@ func main () {
 		fmt.Println ("Not enough argument")
 		fmt.Println ("Usage: ")
 		fmt.Println ("kitabisa a b + for addition")
-		fmt.Println ("kitabisa a b * for multiplication")
+		fmt.Println ("kitabisa a b x for multiplication")
 		fmt.Println ("kitabisa a p for prime numbers")
 		fmt.Println ("kitabisa a f for Fibonacci sequence")
 	}
